@@ -1,3 +1,6 @@
+import { createGlobalStyle } from "styled-components";
+
+const GlobalStyles = createGlobalStyle`
 .pnlm-container {
     margin: 0;
     padding: 0;
@@ -7,7 +10,8 @@
     width: 100%;
     height: 100%;
     font-family: Helvetica, "Nimbus Sans L", "Liberation Sans", Arial, sans-serif;
-    background: #f4f4f4 url('img/background.svg') repeat;
+    background: #f4f4f4 url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='67' height='100' viewBox='0 0 67 100'><path stroke='%23ccc' fill='none' d='M33.5,50,0,63,33.5,75,67,63,33.5,50m-33.5-50,67,25m-0.5,0,0,75m-66.5-75,67-25m-33.5,75,0,25m0-100,0,50'/></svg>") repeat;
+
     -webkit-user-select: none;
     -khtml-user-select: none;
     -moz-user-select: none;
@@ -33,16 +37,15 @@
 
 .pnlm-grab {
     cursor: grab;
-    cursor: url('img/grab.svg') 12 8, default;
 }
 
 .pnlm-grabbing {
     cursor: grabbing;
-    cursor: url('img/grabbing.svg') 12 8, default;
 }
 
 .pnlm-sprite {
-    background-image: url('img/sprites.svg');
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='26' height='208'><circle fill-opacity='.78' cy='117' cx='13' r='11' fill='%23fff'/><circle fill-opacity='.78' cy='143' cx='13' r='11' fill='%23fff'/><circle cy='169' cx='13' r='7' fill='none' stroke='%23000' stroke-width='2'/><circle cy='195' cx='13' r='7' fill='none' stroke='%23000' stroke-width='2'/><circle cx='13' cy='195' r='2.5'/><path d='m5 83v6h2v-4h4v-2zm10 0v2h4v4h2v-6zm-5 5v6h6v-6zm-5 5v6h6v-2h-4v-4zm14 0v4h-4v2h6v-6z'/><path d='m13 110a7 7 0 0 0 -7 7 7 7 0 0 0 7 7 7 7 0 0 0 7 -7 7 7 0 0 0 -7 -7zm-1 3h2v2h-2zm0 3h2v5h-2z'/><path d='m5 57v6h2v-4h4v-2zm10 0v2h4v4h2v-6zm-10 10v6h6v-2h-4v-4zm14 0v4h-4v2h6v-6z'/><path d='m17 38v2h-8v-2z'/><path d='m12 9v3h-3v2h3v3h2v-3h3v-2h-3v-3z'/><path d='m13 136-6.125 6.125h4.375v7.875h3.5v-7.875h4.375z'/><path d='m10.428 173.33v-5.77l5-2.89v5.77zm1-1.73 3-1.73-3.001-1.74z'/></svg>");
+
 }
 
 .pnlm-container:-moz-full-screen {
@@ -389,7 +392,7 @@ div.pnlm-tooltip:hover span:after {
     right: 4px;
     bottom: 4px;
     border-radius: 25px;
-    background-image: url('img/compass.svg');
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' height='50' width='50'><path d='m24.5078 6-3.2578 18h7.5l-3.25781-18h-0.984376zm-3.2578 20 3.2578 18h0.9844l3.2578-18h-7.5zm1.19531 0.9941h5.10938l-2.5547 14.1075-2.5547-14.1075z'/></svg>");
     cursor: default;
     display: none;
 }
@@ -442,3 +445,6 @@ div.pnlm-tooltip:hover span:after {
 .pnlm-pointer {
     cursor: pointer;
 }
+`;
+
+export default GlobalStyles;

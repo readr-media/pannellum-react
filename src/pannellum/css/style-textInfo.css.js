@@ -1,3 +1,6 @@
+import { createGlobalStyle } from "styled-components";
+
+const GlobalStyles = createGlobalStyle`
 #textInfo .tooltip-content {
     font-size: 1.6em;
     position: absolute;
@@ -160,4 +163,6 @@
         transform: scale(1.5);
         opacity: 0;
     }
-}
+}`;
+
+export default GlobalStyles;

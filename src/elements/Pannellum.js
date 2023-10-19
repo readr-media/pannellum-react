@@ -1,7 +1,9 @@
 import propTypes from "prop-types";
 import React, { PureComponent } from "react";
-import "../pannellum/css/pannellum.css";
-import "../pannellum/css/style-textInfo.css";
+// import "../pannellum/css/pannellum.css";
+import PannellumStyles from "../pannellum/css/pannellum.css.js";
+import TextInfoStyles from "../pannellum/css/style-textInfo.css.js";
+// import "../pannellum/css/style-textInfo.css";
 
 import "../pannellum/js/libpannellum.js";
 import "../pannellum/js/pannellum.js";
@@ -11,16 +13,14 @@ class Pannellum extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-      id: Math.random()
-        .toString(36)
-        .substr(2, 9)
+      id: Math.random().toString(36).substr(2, 9),
     };
   }
 
   static propTypes = {
     children: propTypes.oneOfType([
       propTypes.arrayOf(propTypes.node),
-      propTypes.node
+      propTypes.node,
     ]),
     id: propTypes.string,
     width: propTypes.string,
@@ -52,7 +52,7 @@ class Pannellum extends PureComponent {
     keyboardZoom: propTypes.bool,
     mouseZoom: propTypes.bool,
     draggable: propTypes.bool,
-    disableKeyboardCtrl : propTypes.bool,
+    disableKeyboardCtrl: propTypes.bool,
     showFullscreenCtrl: propTypes.bool,
     showControls: propTypes.bool,
     onLoad: propTypes.func,
@@ -120,30 +120,26 @@ class Pannellum extends PureComponent {
     onRender: null,
   };
 
-  renderImage = state => {
+  renderImage = (state) => {
     const { children } = this.props;
     // make the array of sub components, even if its one, it become array of one
     let hotspots = [...children];
     let hotspotArray = [];
     if (Array.isArray(hotspots)) {
-      hotspots.map(hotspot => {
+      hotspots.map((hotspot) => {
         switch (hotspot.props.type) {
           case "info":
             return hotspotArray.push({
-              id: Math.random()
-                .toString(36)
-                .substr(2, 9),
+              id: Math.random().toString(36).substr(2, 9),
               type: hotspot.props.type,
               pitch: hotspot.props.pitch ? hotspot.props.pitch : 10,
               yaw: hotspot.props.yaw ? hotspot.props.yaw : 10,
               text: hotspot.props.text ? hotspot.props.text : "",
-              URL: hotspot.props.URL ? hotspot.props.URL : ""
+              URL: hotspot.props.URL ? hotspot.props.URL : "",
             });
           case "custom":
             return hotspotArray.push({
-              id: Math.random()
-                .toString(36)
-                .substr(2, 9),
+              id: Math.random().toString(36).substr(2, 9),
               pitch: hotspot.props.pitch ? hotspot.props.pitch : 10,
               yaw: hotspot.props.yaw ? hotspot.props.yaw : 10,
               cssClass: hotspot.props.cssClass
@@ -160,7 +156,7 @@ class Pannellum extends PureComponent {
                 : this.handleClickHotspot,
               clickHandlerArgs: hotspot.props.handleClickArg
                 ? hotspot.props.handleClickArg
-                : { name: "test" }
+                : { name: "test" },
             });
           default:
             return [];
@@ -206,7 +202,7 @@ class Pannellum extends PureComponent {
     };
 
     Object.keys(jsonConfig).forEach(
-      key => jsonConfig[key] === "" && delete jsonConfig[key]
+      (key) => jsonConfig[key] === "" && delete jsonConfig[key]
     );
     // this.setState({ jsonConfig });
 
@@ -227,7 +223,6 @@ class Pannellum extends PureComponent {
     this.panorama.on("mouseup", this.props.onMouseup);
     this.panorama.on("touchstart", this.props.onTouchstart);
     this.panorama.on("touchend", this.props.onTouchend);
-
   };
 
   componentDidMount = () => {
@@ -252,15 +247,17 @@ class Pannellum extends PureComponent {
     ) {
       this.renderImage("update");
     }
-    if (prevProps.maxYaw !== this.props.maxYaw ||
+    if (
+      prevProps.maxYaw !== this.props.maxYaw ||
       prevProps.minYaw !== this.props.minYaw ||
       prevProps.maxPitch !== this.props.maxPitch ||
       prevProps.minPitch !== this.props.minPitch ||
       prevProps.maxHfov !== this.props.maxHfov ||
-      prevProps.minHfov !== this.props.minHfov){
-      this.panorama.setYawBounds([this.props.minYaw,this.props.maxYaw]);
-      this.panorama.setPitchBounds([this.props.minPitch,this.props.maxPitch]);
-      this.panorama.setHfovBounds([this.props.minHfov,this.props.maxHfov]);
+      prevProps.minHfov !== this.props.minHfov
+    ) {
+      this.panorama.setYawBounds([this.props.minYaw, this.props.maxYaw]);
+      this.panorama.setPitchBounds([this.props.minPitch, this.props.maxPitch]);
+      this.panorama.setHfovBounds([this.props.minHfov, this.props.maxHfov]);
     }
     if (prevProps.yaw !== this.props.yaw) {
       this.panorama.setYaw(this.props.yaw);
@@ -304,14 +301,18 @@ class Pannellum extends PureComponent {
     let { width, height } = this.props;
     let divStyle = {
       width: width,
-      height: height
+      height: height,
     };
     return (
-      <div
-        id={this.props.id ? this.props.id : this.state.id}
-        style={divStyle}
-        ref={node => (this.imageNode = node)}
-      />
+      <React.Fragment>
+        <PannellumStyles />
+        <TextInfoStyles />
+        <div
+          id={this.props.id ? this.props.id : this.state.id}
+          style={divStyle}
+          ref={(node) => (this.imageNode = node)}
+        />
+      </React.Fragment>
     );
   }
 }

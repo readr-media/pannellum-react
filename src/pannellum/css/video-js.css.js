@@ -1,3 +1,6 @@
+import { createGlobalStyle } from "styled-components";
+
+const GlobalStyles = createGlobalStyle`
 .video-js .vjs-big-play-button .vjs-icon-placeholder:before, .vjs-button > .vjs-icon-placeholder:before, .video-js .vjs-modal-dialog, .vjs-modal-dialog .vjs-modal-dialog-content {
   position: absolute;
   top: 0;
@@ -14,82 +17,83 @@
   font-weight: normal;
   font-style: normal; }
 
+  
 .vjs-icon-play, .video-js .vjs-big-play-button .vjs-icon-placeholder:before, .video-js .vjs-play-control .vjs-icon-placeholder {
   font-family: VideoJS;
   font-weight: normal;
   font-style: normal; }
   .vjs-icon-play:before, .video-js .vjs-big-play-button .vjs-icon-placeholder:before, .video-js .vjs-play-control .vjs-icon-placeholder:before {
-    content: "\f101"; }
-
+    content: "\\f101"; }
+  
 .vjs-icon-play-circle {
   font-family: VideoJS;
   font-weight: normal;
   font-style: normal; }
   .vjs-icon-play-circle:before {
-    content: "\f102"; }
+    content: "\\f102"; }
 
 .vjs-icon-pause, .video-js .vjs-play-control.vjs-playing .vjs-icon-placeholder {
   font-family: VideoJS;
   font-weight: normal;
   font-style: normal; }
   .vjs-icon-pause:before, .video-js .vjs-play-control.vjs-playing .vjs-icon-placeholder:before {
-    content: "\f103"; }
+    content: "\\f103"; }
 
 .vjs-icon-volume-mute, .video-js .vjs-mute-control.vjs-vol-0 .vjs-icon-placeholder {
   font-family: VideoJS;
   font-weight: normal;
   font-style: normal; }
   .vjs-icon-volume-mute:before, .video-js .vjs-mute-control.vjs-vol-0 .vjs-icon-placeholder:before {
-    content: "\f104"; }
+    content: "\\f104"; }
 
 .vjs-icon-volume-low, .video-js .vjs-mute-control.vjs-vol-1 .vjs-icon-placeholder {
   font-family: VideoJS;
   font-weight: normal;
   font-style: normal; }
   .vjs-icon-volume-low:before, .video-js .vjs-mute-control.vjs-vol-1 .vjs-icon-placeholder:before {
-    content: "\f105"; }
+    content: "\\f105"; }
 
 .vjs-icon-volume-mid, .video-js .vjs-mute-control.vjs-vol-2 .vjs-icon-placeholder {
   font-family: VideoJS;
   font-weight: normal;
   font-style: normal; }
   .vjs-icon-volume-mid:before, .video-js .vjs-mute-control.vjs-vol-2 .vjs-icon-placeholder:before {
-    content: "\f106"; }
+    content: "\\f106"; }
 
 .vjs-icon-volume-high, .video-js .vjs-mute-control .vjs-icon-placeholder {
   font-family: VideoJS;
   font-weight: normal;
   font-style: normal; }
   .vjs-icon-volume-high:before, .video-js .vjs-mute-control .vjs-icon-placeholder:before {
-    content: "\f107"; }
+    content: "\\f107"; }
 
 .vjs-icon-fullscreen-enter, .video-js .vjs-fullscreen-control .vjs-icon-placeholder {
   font-family: VideoJS;
   font-weight: normal;
   font-style: normal; }
   .vjs-icon-fullscreen-enter:before, .video-js .vjs-fullscreen-control .vjs-icon-placeholder:before {
-    content: "\f108"; }
+    content: "\\f108"; }
 
 .vjs-icon-fullscreen-exit, .video-js.vjs-fullscreen .vjs-fullscreen-control .vjs-icon-placeholder {
   font-family: VideoJS;
   font-weight: normal;
   font-style: normal; }
   .vjs-icon-fullscreen-exit:before, .video-js.vjs-fullscreen .vjs-fullscreen-control .vjs-icon-placeholder:before {
-    content: "\f109"; }
+    content: "\\f109"; }
 
 .vjs-icon-square {
   font-family: VideoJS;
   font-weight: normal;
   font-style: normal; }
   .vjs-icon-square:before {
-    content: "\f10a"; }
+    content: "\\f10a"; }
 
 .vjs-icon-spinner {
   font-family: VideoJS;
   font-weight: normal;
   font-style: normal; }
   .vjs-icon-spinner:before {
-    content: "\f10b"; }
+    content: "\\f10b"; }
 
 .vjs-icon-subtitles, .video-js .vjs-subtitles-button .vjs-icon-placeholder, .video-js .vjs-subs-caps-button .vjs-icon-placeholder,
 .video-js.video-js:lang(en-GB) .vjs-subs-caps-button .vjs-icon-placeholder,
@@ -104,7 +108,7 @@
   .video-js.video-js:lang(en-IE) .vjs-subs-caps-button .vjs-icon-placeholder:before,
   .video-js.video-js:lang(en-AU) .vjs-subs-caps-button .vjs-icon-placeholder:before,
   .video-js.video-js:lang(en-NZ) .vjs-subs-caps-button .vjs-icon-placeholder:before {
-    content: "\f10c"; }
+    content: "\\f10c"; }
 
 .vjs-icon-captions, .video-js .vjs-captions-button .vjs-icon-placeholder, .video-js:lang(en) .vjs-subs-caps-button .vjs-icon-placeholder,
 .video-js:lang(fr-CA) .vjs-subs-caps-button .vjs-icon-placeholder {
@@ -113,140 +117,140 @@
   font-style: normal; }
   .vjs-icon-captions:before, .video-js .vjs-captions-button .vjs-icon-placeholder:before, .video-js:lang(en) .vjs-subs-caps-button .vjs-icon-placeholder:before,
   .video-js:lang(fr-CA) .vjs-subs-caps-button .vjs-icon-placeholder:before {
-    content: "\f10d"; }
+    content: "\\f10d"; }
 
 .vjs-icon-chapters, .video-js .vjs-chapters-button .vjs-icon-placeholder {
   font-family: VideoJS;
   font-weight: normal;
   font-style: normal; }
   .vjs-icon-chapters:before, .video-js .vjs-chapters-button .vjs-icon-placeholder:before {
-    content: "\f10e"; }
+    content: "\\f10e"; }
 
 .vjs-icon-share {
   font-family: VideoJS;
   font-weight: normal;
   font-style: normal; }
   .vjs-icon-share:before {
-    content: "\f10f"; }
+    content: "\\f10f"; }
 
 .vjs-icon-cog {
   font-family: VideoJS;
   font-weight: normal;
   font-style: normal; }
   .vjs-icon-cog:before {
-    content: "\f110"; }
+    content: "\\f110"; }
 
 .vjs-icon-circle, .video-js .vjs-play-progress, .video-js .vjs-volume-level {
   font-family: VideoJS;
   font-weight: normal;
   font-style: normal; }
   .vjs-icon-circle:before, .video-js .vjs-play-progress:before, .video-js .vjs-volume-level:before {
-    content: "\f111"; }
+    content: "\\f111"; }
 
 .vjs-icon-circle-outline {
   font-family: VideoJS;
   font-weight: normal;
   font-style: normal; }
   .vjs-icon-circle-outline:before {
-    content: "\f112"; }
+    content: "\\f112"; }
 
 .vjs-icon-circle-inner-circle {
   font-family: VideoJS;
   font-weight: normal;
   font-style: normal; }
   .vjs-icon-circle-inner-circle:before {
-    content: "\f113"; }
+    content: "\\f113"; }
 
 .vjs-icon-hd {
   font-family: VideoJS;
   font-weight: normal;
   font-style: normal; }
   .vjs-icon-hd:before {
-    content: "\f114"; }
+    content: "\\f114"; }
 
 .vjs-icon-cancel, .video-js .vjs-control.vjs-close-button .vjs-icon-placeholder {
   font-family: VideoJS;
   font-weight: normal;
   font-style: normal; }
   .vjs-icon-cancel:before, .video-js .vjs-control.vjs-close-button .vjs-icon-placeholder:before {
-    content: "\f115"; }
+    content: "\\f115"; }
 
 .vjs-icon-replay, .video-js .vjs-play-control.vjs-ended .vjs-icon-placeholder {
   font-family: VideoJS;
   font-weight: normal;
   font-style: normal; }
   .vjs-icon-replay:before, .video-js .vjs-play-control.vjs-ended .vjs-icon-placeholder:before {
-    content: "\f116"; }
+    content: "\\f116"; }
 
 .vjs-icon-facebook {
   font-family: VideoJS;
   font-weight: normal;
   font-style: normal; }
   .vjs-icon-facebook:before {
-    content: "\f117"; }
+    content: "\\f117"; }
 
 .vjs-icon-gplus {
   font-family: VideoJS;
   font-weight: normal;
   font-style: normal; }
   .vjs-icon-gplus:before {
-    content: "\f118"; }
+    content: "\\f118"; }
 
 .vjs-icon-linkedin {
   font-family: VideoJS;
   font-weight: normal;
   font-style: normal; }
   .vjs-icon-linkedin:before {
-    content: "\f119"; }
+    content: "\\f119"; }
 
 .vjs-icon-twitter {
   font-family: VideoJS;
   font-weight: normal;
   font-style: normal; }
   .vjs-icon-twitter:before {
-    content: "\f11a"; }
+    content: "\\f11a"; }
 
 .vjs-icon-tumblr {
   font-family: VideoJS;
   font-weight: normal;
   font-style: normal; }
   .vjs-icon-tumblr:before {
-    content: "\f11b"; }
+    content: "\\f11b"; }
 
 .vjs-icon-pinterest {
   font-family: VideoJS;
   font-weight: normal;
   font-style: normal; }
   .vjs-icon-pinterest:before {
-    content: "\f11c"; }
+    content: "\\f11c"; }
 
 .vjs-icon-audio-description, .video-js .vjs-descriptions-button .vjs-icon-placeholder {
   font-family: VideoJS;
   font-weight: normal;
   font-style: normal; }
   .vjs-icon-audio-description:before, .video-js .vjs-descriptions-button .vjs-icon-placeholder:before {
-    content: "\f11d"; }
+    content: "\\f11d"; }
 
 .vjs-icon-audio, .video-js .vjs-audio-button .vjs-icon-placeholder {
   font-family: VideoJS;
   font-weight: normal;
   font-style: normal; }
   .vjs-icon-audio:before, .video-js .vjs-audio-button .vjs-icon-placeholder:before {
-    content: "\f11e"; }
+    content: "\\f11e"; }
 
 .vjs-icon-next-item {
   font-family: VideoJS;
   font-weight: normal;
   font-style: normal; }
   .vjs-icon-next-item:before {
-    content: "\f11f"; }
+    content: "\\f11f"; }
 
 .vjs-icon-previous-item {
   font-family: VideoJS;
   font-weight: normal;
   font-style: normal; }
   .vjs-icon-previous-item:before {
-    content: "\f120"; }
+    content: "\\f120"; }
 
 .video-js {
   display: block;
@@ -1143,7 +1147,7 @@ video::-webkit-media-text-track-display {
 
 .video-js .vjs-subs-caps-button + .vjs-menu .vjs-captions-menu-item .vjs-menu-item-text .vjs-icon-placeholder:before {
   font-family: VideoJS;
-  content: "\f10d";
+  content: "\\f10d";
   font-size: 1.5em;
   line-height: inherit; }
 
@@ -1154,7 +1158,7 @@ video::-webkit-media-text-track-display {
 
 .video-js .vjs-audio-button + .vjs-menu .vjs-main-desc-menu-item .vjs-menu-item-text .vjs-icon-placeholder:before {
   font-family: VideoJS;
-  content: " \f11d";
+  content: " \\f11d";
   font-size: 1.5em;
   line-height: inherit; }
 
@@ -1276,4 +1280,7 @@ video::-webkit-media-text-track-display {
   width: 100%;
   height: 100%;
   border: none;
-  visibility: hidden; }
+  visibility: hidden; }  
+  `;
+
+export default GlobalStyles;
