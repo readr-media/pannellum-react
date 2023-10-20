@@ -1,6 +1,6 @@
 {
   "name": "@readr-media/pannellum-react",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "description": "Pannellum React Component",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -20,7 +20,7 @@
     "deploy": "gh-pages -d demo/dist"
   },
   "dependencies": {
-    "styled-components": "^6.1.0",
+    "styled-components": "5.3.5",
     "video.js": "7.18.1"
   },
   "peerDependencies": {
