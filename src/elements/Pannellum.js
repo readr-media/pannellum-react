@@ -1,9 +1,7 @@
 import propTypes from "prop-types";
 import React, { PureComponent } from "react";
-// import "../pannellum/css/pannellum.css";
 import PannellumStyles from "../pannellum/css/pannellum.css.js";
 import TextInfoStyles from "../pannellum/css/style-textInfo.css.js";
-// import "../pannellum/css/style-textInfo.css";
 
 import "../pannellum/js/libpannellum.js";
 import "../pannellum/js/pannellum.js";
