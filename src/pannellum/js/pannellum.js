@@ -125,8 +125,9 @@ if (typeof window !== "undefined") {
           "Due to iOS 8's broken WebGL implementation, only " +
           "progressive encoded JPEGs work for your device (this " +
           "panorama uses standard encoding).",
+        // Due to chrome user may turn off the hardware acceleration which will cause the WebGL not found, show the chinese hint to guide user turn it on.
         genericWebGLError:
-          "Your browser does not have the necessary WebGL support to display this panorama.",
+          "你的瀏覽器或版本不支援顯示，建議使用 Chrome/Safari 來開啟或升級瀏覽器版本。若使用 Chrome 仍無法開啟，請在設定>系統中開啟「使用圖形加速功能」。",
         textureSizeError:
           "This panorama is too big for your device! It's " +
           "%spx wide, but your device only supports images up to " +
