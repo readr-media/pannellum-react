@@ -1,6 +1,6 @@
 {
   "name": "@readr-media/pannellum-react",
-  "version": "1.4.3",
+  "version": "1.4.4",
   "description": "Pannellum React Component",
   "main": "lib/index.js",
   "module": "es/index.js",
