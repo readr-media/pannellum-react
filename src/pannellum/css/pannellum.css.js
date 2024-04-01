@@ -275,7 +275,7 @@ const GlobalStyles = createGlobalStyle`
 }
 
 .pnlm-info-box {
-    font-size: 15px;
+    font-size: 12px;
     position: absolute;
     top: 50%;
     left: 50%;
